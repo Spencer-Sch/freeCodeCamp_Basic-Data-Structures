@@ -122,3 +122,144 @@ function filteredArray(arr, elem) {
 }
 
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+// Lesson 12
+
+let myNestedArray = [
+  // Only change code below this line
+  [
+    ['unshift', false, 1, 2, 3, 'complex', 'nested', 'deep'],
+    [
+      ['loop', 'shift', 6, 7, 1000, 'method', 'deeper'],
+      [
+        ['concat', false, true, 'spread', 'array', 'deepest'],
+        ['mutate', 1327.98, 'splice', 'slice', 'push'],
+        ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+      ]
+    ]
+  ]
+  // Only change code above this line
+];
+
+// Lesson 13
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+// Only change code below this line
+foods.bananas = 13;
+foods['grapes'] = 35;
+foods.strawberries = 27;
+// Only change code above this line
+
+console.log(foods);
+
+// Lesson 14
+
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+
+// Only change code below this line
+userActivity.data.online = 45;
+// Only change code above this line
+
+console.log(userActivity);
+
+// Lesson 15
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+function checkInventory(scannedItem) {
+  // Only change code below this line
+  let product = foods[scannedItem];
+  return product;
+  // Only change code above this line
+}
+
+console.log(checkInventory("apples"));
+
+// Lesson 16
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// Only change code below this line
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+// Only change code above this line
+
+console.log(foods);
+
+// Lesson 17
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  // Only change code below this line
+  if ('Alan' in users && 
+      'Jeff' in users && 
+      'Sarah' in users && 
+      'Ryan' in users) {
+    return true;
+  }
+    return false;
+  // Only change code above this line
+}
+
+console.log(isEveryoneHere(users));
+
+// Lesson 18
+
+function countOnline(usersObj) {
+  // Only change code below this line
+  let onlineCount = 0;
+  for (let user in usersObj) {
+    if (usersObj[user].online) {
+      onlineCount++;
+    }
+  }
+    return onlineCount; //total number of users online
+  // Only change code above this line
+}
+
+// Last Commit
